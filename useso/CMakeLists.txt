@@ -17,15 +17,17 @@ message("Build Type:" ${CMAKE_BUILD_TYPE} ${CMAKE_CXX_FLAGS})
 
 #head file
 include_directories(. ${PROJECT_SOURCE_DIR}/../
-
+#${PROJECT_SOURCE_DIR}/../-lsotest.so
 )
 
 ##target_compile_definitions(Mono PUBLIC FUNC_MAP_SAVE_LOAD=1)
 add_executable(${PROJECT_NAME}
-main.cpp)
+main.cpp
+)
 
-target_link_libraries(${PROJECT_NAME}
+target_link_libraries(${PROJECT_NAME} 
 ${PROJECT_SOURCE_DIR}/../libsotest.so
+-ldl
 )
 
 

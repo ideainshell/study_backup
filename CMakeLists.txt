@@ -20,6 +20,7 @@ include_directories(. ${PROJECT_SOURCE_DIR}
 )
 
 add_library(${PROJECT_NAME} SHARED ${PROJECT_SOURCE_DIR}/testone.cpp)
+#add_library(${PROJECT_NAME} STATIC ${PROJECT_SOURCE_DIR}/testone.cpp)
 
 target_link_libraries(${PROJECT_NAME}
 

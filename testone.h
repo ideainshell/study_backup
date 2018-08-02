@@ -1,17 +1,14 @@
 #ifndef TESTONE_H_
 #define TESTONE_H_
-
-#include "testone.h"
-#include <iostream>
-
-class test
+class testBase
 {
 public:
-  test();
- ~test();
-  int getnum();
-private:
-  int num;
-
+        testBase(){}
+        virtual ~testBase(){}
+        virtual void display() = 0;
 };
+ 
+typedef testBase* create_t();
+typedef void destroy_t(testBase *p);
 #endif
+

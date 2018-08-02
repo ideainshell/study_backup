@@ -1,14 +1,21 @@
+#include<stdio.h>
 #include "testone.h"
-
-test::test():num(0)
+ 
+class test1:public testBase
 {
-}
-
-test::~test()
+public:
+        void display()
+        {
+                printf("display in test1\n");
+        }
+};
+ 
+extern "C" testBase* create()
 {
-}
-
-int test::getnum()
+        return new test1;
+} 
+ 
+extern "C" void destroy(testBase *p)
 {
-  return num;
+        delete p;
 }
