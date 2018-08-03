@@ -29,5 +29,10 @@ int main()
         destroy(test);
  
         dlclose(handle);
+	while(1)
+{
+	printf("11");
+}
+printf("22");
         return 0;
 }
